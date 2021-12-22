@@ -8,17 +8,20 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- navigation -->
     <div class="nav">
-        <h1><span>Just</span>Dessert</h1>
+        <h1 onclick="removeElement()"><span>Just</span>Dessert</h1>
         <div>
-            <button class="join-btn">Join</button>
+            <button id="join-btn" onclick="this.remove()" class="join-btn">Join</button>
             <button class="login-btn">Login</button>
         </div>
     </div>
+
+    <!-- search bar -->
     <div class="search">
         <div>
-            <input type="text">
-            <button>GO</button>
+            <input id="searchbar" value="this is a value!" type="text">
+            <button onclick="search()">GO</button>
         </div>
         <div>
             <img src="https://placekitten.com/200/200" alt="">
@@ -38,16 +41,56 @@
         </div>
 
     </div>
+
+    <!-- main content -->
     <div class="columns">
         <div class="col-3">
             <div class="rotd">
-
+                <h2>Recipe of the Day</h2>
+                <div class="recipe">
+                    <img class="recipe-img" src="https://placekitten.com/700/400" alt="">
+                    <div class="score">
+                        <p>Orange Tea Jelly Tart</p>
+                        <div>
+                            <img onclick="vote('#count1')" src="https://placekitten.com/50/50" alt="">
+                            <p id="count1">66</p>
+                        </div>
+                    </div>
+                    <p>by: <a href="">Somebody or another!</a></p>
+                </div>
+                <a href="" class="link">See Full Recipe</a>
             </div>
         </div>
         <div class="col-2">
+            <div class="recommended">
+                <h3>Recommended for you!</h3>
+                <div class="recipe">
+                    <img class="recipe-img" src="https://placekitten.com/700/400" alt="">
+                    <div class="score">
+                        <p>Orange Tea Jelly Tart</p>
+                        <div>
+                            <img onclick="vote('#count2')" src="https://placekitten.com/50/50" alt="">
+                            <p id="count2">66</p>
+                        </div>
+                    </div>
+                    <p>by: <a href="">Somebody or another!</a></p>
+                </div>
+                <div class="recipe">
+                    <img class="recipe-img" src="https://placekitten.com/700/400" alt="">
+                    <div class="score">
+                        <p>Orange Tea Jelly Tart</p>
+                        <div>
+                            <img onclick="vote('#count3')" src="https://placekitten.com/50/50" alt="">
+                            <p id="count3">66</p>
+                        </div>
+                    </div>
+                    <p>by: <a href="">Somebody or another!</a></p>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- footer content -->
     <script src="script.js"></script>
 </body>
 </html>
